@@ -1,0 +1,24 @@
+name: Propagation Auto Release
+
+run-name: Propagation Auto Release
+
+on:
+  pull_request:
+    branches:
+      - 'release/**'
+    types:
+      - closed
+
+permissions:
+  contents: write
+  id-token: write
+  pull-requests: write
+
+jobs:
+  archboot:
+    name: ARCH
+    uses: ArchBoot/reusables-worklows/.github/workflows/reusable-propagation.yml@feature/JAGT-workflows
+    with:
+      git_user_name: ${{ vars.GIT_USER }}
+      git_user_email: ${{ vars.GIT_EMAIL }}
+    secrets: inherit

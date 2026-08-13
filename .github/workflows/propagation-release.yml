@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   archboot:
-    name: ARCH
+    name: ArchBoot
     uses: ArchBoot/reusables-worklows/.github/workflows/reusable-propagation.yml@feature/JAGT-workflows
     with:
       git_user_name: ${{ vars.GIT_USER }}

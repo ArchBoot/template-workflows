@@ -15,7 +15,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  archboot:
+  merge:
     name: ArchBoot
     uses: ArchBoot/reusables-worklows/.github/workflows/reusable-propagation.yml@feature/JAGT-workflows
     with:

@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 jobs:
-  archboot:
+  release:
     name: ArchBoot
     uses: ArchBoot/reusables-worklows/.github/workflows/reusable-release.yml@feature/JAGT-workflows
     with:
